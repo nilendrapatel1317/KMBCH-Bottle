@@ -1,0 +1,532 @@
+@font-face {
+    font-family: arch-300;
+    src: url(../fonts/63a027e78518d5dac20a86fa_Archivo_Expanded-Regular.ttf);
+}
+@font-face {
+    font-family: arch-400;
+    src: url(../fonts/63a027e78518d598b90a8704_Archivo_Condensed-SemiBold.ttf);
+}
+@font-face {
+    font-family: arch-600;
+    src: url(../fonts/63a027e78518d549380a8702_Archivo_Condensed-Bold.ttf);
+}
+@font-face {
+    font-family: arch-700;
+    src: url(../fonts/63a027e78518d5396a0a86f4_Archivo_Expanded-Bold.ttf);
+}
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    /* background-color: #171010; */
+}
+/* ========================================================== */
+
+/* ===== Custom Cursor ==================================== */
+
+.cursor{
+    width: 20px;
+    height: 20px;
+    /* background: rgb(255, 181, 168); */
+    border: 10px solid rgb(255, 181, 168);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 999999;
+    mix-blend-mode: difference;
+}
+
+/* ========================================================== */
+
+/* ===== Loader css ========================================= */
+
+.loader{
+    width: 100%;
+    height: 100%;
+    background-color: #eeb9dd;
+    position: fixed;
+    z-index: 999999;
+    overflow: hidden;
+
+}
+.loader img{
+    width: 130px;
+    animation: loader-circle 2s ease-in-out infinite;
+    
+}
+@keyframes loader-circle {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ====================================================================== */
+
+
+
+
+/* ======= Awwwards tag ============================ */
+.awwward-tag{
+    position: absolute;
+    bottom: 20%;
+    left: -3.5%;
+    width: 10%;
+    height: 7%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+    font-family: noto-600;
+    font-size: .9vw;
+    transform:rotate(-90deg);
+    z-index: 9999;
+}
+.awwward-tag h3{
+    transform:rotate(90deg);
+    
+}
+
+/* ====================================================== */
+
+
+
+
+/* ======================================================================== */
+
+
+
+
+#main{
+    position: relative;
+    overflow: hidden;
+}
+.d-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page{
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #FFF9C2;
+}
+
+#page1 canvas{
+    position: relative;
+    z-index: 9999;
+    width: 100%;
+    min-height: 100vh;
+}
+#page2 canvas{
+    position: relative;
+    z-index: 9999;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+
+/* ================================================================================================== */
+#page0{
+    background-image: url(../images/home-page.webp);
+    background-size: cover;
+}
+.navbar{
+    width: 100%;
+    height: 10vh;
+    /* background-color: rgba(255, 255, 224, 0.55); */
+    display: flex;
+}
+.nav-left{
+    width: 60%;
+    height: 100%;
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 80px;
+    padding: 20px 120px 0;
+}
+.nav-left a{
+    text-decoration: none;
+    color: black;
+    font-family: arch-300;
+}
+
+.nav-right{
+    width: 40%;
+    height: 100%;
+    /* background-color: lightblue; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-right: 135px;
+}
+
+.web-logo img{
+    width: 100px;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+}
+.web-logo img:hover{
+    scale: 1.1;
+}
+
+
+.p0-wrapper{
+    width: 100%;
+    height: 90vh;
+    /* background-color: rgba(144, 238, 144, 0.505); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:0 120px;
+}
+
+.p0-wrapper h1{
+    font-family: arch-600;
+    /* font-size: 5vw; */
+    font-size:75px;
+    line-height: .9;
+}
+.p0-wrapper h1 span{
+    opacity: .2;
+}
+button{
+    width: fit-content;
+    padding: 17px 35px;
+    font-size: 1.2vw;
+    background-color: white;
+    color: black;
+    font-family: arch-300;
+    margin: 40px 0;
+    border: none;
+    outline: none;
+    position: relative;
+}
+button::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    content: "Try Now";
+    font-family: arch-300;
+    font-size: 1.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all linear .3s;
+    overflow: hidden;
+}
+ button:hover::after{
+    height: 0%;
+}
+
+
+
+
+/* ================================================================================================== */
+
+
+#page1{
+    position: relative;
+    background-color: #F9E2FF;
+}
+
+.overlay-box{
+    width: 100%;
+}
+.overlay-box h1{
+    font-family: arch-700;
+    font-size: 10vmax;
+}
+.overlay-box p{
+    font-family: arch-300;
+}
+#page1 .box-bottom{
+    height: 65vh;
+    display: flex;
+}
+#page1 .left{
+    width: 50%;
+}
+#page1 .right{
+    width: 50%;
+}
+
+.overlay-photo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.overlay-photo img{
+    height: 50vmax;
+}
+
+#page1 .box-1{
+    height: 100vh;
+    position: absolute;
+    top: 0;
+
+}
+#page1 .box-2{
+    height: 100vh;
+    background-color: rgba(0, 128, 0, 0);
+    position: absolute;
+    top: 200vh;
+}
+.box-2-heading{
+    z-index: 4;
+    position: sticky;
+}
+
+
+
+#page1 .box-3{
+    height: 100vh;
+    background-color: rgba(0, 0, 255, 0);
+    position: absolute;
+    top:520vh;
+}
+#page1 .box-3 .box-bottom{
+    height: 70vh;
+    display: flex;
+}
+#page1 .box-3 .right{
+    width: 50%;
+    padding-left: 150px;
+}
+
+
+/* ==================================================================================================================== */
+/* ==================================================================================================================== */
+
+#page5{
+    background-color: #FEF8C2;
+}
+.container{
+    width: 100vmax;
+    height: fit-content;
+    display: flex;
+    position: relative;
+}
+.box{
+    width: 20%;
+    /* height: 100%; */
+}
+.in-box{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+
+
+.in-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ==================================================================================================================== */
+/* ==================================================================================================================== */
+#page2{
+    background-color: #F0E6D9;
+}
+#page2 .overlay-box{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: black;
+    position: relative;
+}
+#page2 .overlay-box .box{
+    width: 250px;
+    position: absolute;
+    top: -40vw;
+    left: 18vw;
+    transform: translate(-50%,-50%);
+}
+#page2 .overlay-box .box h5{
+    font-family: arch-700;
+}
+#page2 .overlay-box .box p{
+    font-family: arch-300;
+}
+
+
+/* ==================================================================================================================== */
+/* ==================================================================================================================== */
+
+#page3{
+    min-height: 150vh;
+    background-color: white;
+}
+.p3-top{
+    margin-left: 7vw;
+    height: 60vh;
+    /* background-color: red; */
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p3-top-left{
+    width: 50%;
+    /* background-color: yellow; */
+    height: 50%;
+}
+.p3-top-right{
+    width: 50%;
+    /* background-color: springgreen; */
+    height: 50%;
+}
+.p3-top-right h6{
+    font-family: arch-300;
+    font-weight: light;
+}
+.p3-top h1{
+    font-family: arch-700 ;
+    font-size: 3.3vmax;
+}
+
+
+
+
+
+
+.p3-img-1{
+    width: 60vmax;
+    height: 40vmax;
+    margin-left: 10vw;
+}
+.p3-img-2{
+    height: 30vmax;
+    margin-left: -20vw;
+}
+
+
+/* ========================================================================================================================================== */
+/* ========================================================================================================================================== */
+#page8{
+    background-color: white;
+    display: flex;
+    height: 100vh;
+}
+.p8-left{
+    width: 30%;
+    height: 100%;
+}
+.p8-left-top{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p8-left-top p{
+    font-family: arch-700;
+    font-size: 1.5vmax;
+    width: 75%;
+}
+.p8-left-bottom{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.p8-left-bottom p{
+    width: 70%;
+    font-size: 1.3vmax;
+}
+.p8-right{
+    width: 70%;
+    height: 100%;
+}
+.p8-right-top{
+    width: 100%;
+    height: 30%;
+}
+.p8-right-bottom{
+    width: 100%;
+    height: 70%;
+}
+.p8-right-bottom-top{
+    width: 100%;
+    height: 30%;
+}
+.p8-right-bottom-top p{
+    width: 35%;
+    font-size: 1.3vmax;
+}
+.p8-right-bottom-bottom{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+}
+.p8-right-bottom-bottom h1{
+    font-family: arch-700;
+    font-size: 7vmax;
+}
+
+/* ========================================================================================================================================== */
+/* ========================================================================================================================================== */
+
+
+
+
+#page6{
+    background: url(../images/p6-background-img.jpg);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    display: flex;
+}
+.p6-left{
+    background-color: #efc976;
+    width: 50%;
+    height: inherit;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.p6-left h1{
+    font-family: arch-700;
+    font-size: 5.5vmax;
+}
+.p6-left p{
+    font-family: arch-300;
+    width: 60%;
+}
+.p6-right{
+    width: 50%;
+    height: inherit;
+    /* background-color: rgb(0, 255, 26); */
+}
